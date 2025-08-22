@@ -23,7 +23,7 @@ public class TransactionController {
 
     @PostMapping
     public ResponseEntity<Void> createTransaction(@Valid @RequestBody TransactionRequestDTO request) {
-        if (request.getDataHora().isAfter(OffsetDateTime.now())) {
+        if (request.getDataHora().isAfter(OffsetDateTime.now()) || request.getValor() <= 0) {
             return ResponseEntity.unprocessableEntity().build();
         }
         transactionService.addTransaction(new Transaction(request.getValor(), request.getDataHora()));

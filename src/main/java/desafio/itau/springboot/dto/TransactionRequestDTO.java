@@ -10,7 +10,6 @@ public class TransactionRequestDTO {
 
     @Getter
     @NotNull
-    @Min(0)
     private double valor;
 
     @Getter
