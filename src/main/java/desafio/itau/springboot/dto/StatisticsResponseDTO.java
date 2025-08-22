@@ -4,7 +4,7 @@ import lombok.Getter;
 
 import java.util.DoubleSummaryStatistics;
 
-public class StatisticsResponsedDTO {
+public class StatisticsResponseDTO {
     @Getter
     private long count;
     @Getter
@@ -16,7 +16,7 @@ public class StatisticsResponsedDTO {
     @Getter
     private double max;
 
-    public StatisticsResponsedDTO(DoubleSummaryStatistics stats) {
+    public StatisticsResponseDTO(DoubleSummaryStatistics stats) {
         this.count = stats.getCount();
         this.sum = stats.getSum();
         this.avg = stats.getAverage();
