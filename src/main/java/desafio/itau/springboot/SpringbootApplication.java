@@ -11,3 +11,5 @@ public class SpringbootApplication {
 	}
 
 }
+
+// AJUSTAR O WORKFLOW PARA TESTES UNITÁRIOS/GRADLE BUILD;
